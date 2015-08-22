@@ -1,34 +1,37 @@
 __author__ = 'Polar'
 
+
 class Data(object):
 
     def __init__(self,
-                 open,
-                 bid,
-                 ask,
-                 OneYTargetEst,
-                 beta,
-                 nextEarnDate,
-                 daysRange,
-                 fiftyTwoWeekRange,
-                 volume,
+                 prevClose,
                  avgVolume,
-                 marketCap,
+                 bid,
+                 fiftyTwoWeekRange,
                  PEttm,
+                 volume,
+                 daysRange,
+                 beta,
+                 OneYTargetEst,
+                 ask,
                  EPSttm,
+                 open,
+                 marketCap,
+                 nextEarnDate,
                  DivYield):
-        self.prevClose
-        self.open
-        self.bid
-        self.ask
-        self.OneYTargetEst
-        self.beta
-        self.nextEarnDate
-        self.daysRange
-        self.fiftyTwoWeekRange
-        self.volume
-        self.avgVolume
-        self.marketCap
-        self.PEttm
-        self.EPSttm
+
+        self.prevClose,
+        self.avgVolume,
+        self.bid,
+        self.fiftyTwoWeekRange,
+        self.PEttm,
+        self.volume,
+        self.daysRange,
+        self.beta,
+        self.OneYTargetEst,
+        self.ask,
+        self.EPSttm,
+        self.open,
+        self.marketCap,
+        self.nextEarnDate,
         self.DivYield
