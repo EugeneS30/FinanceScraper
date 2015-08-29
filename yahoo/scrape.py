@@ -1,20 +1,11 @@
-from yahoo.containers.stockData import StockData
-
 __author__ = 'eugene.shragovich'
 
-if __name__ == '__main__':
-    if __package__ is None:
-        import sys
-        from os import path
-        sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
-        from containers.stockData import StockData
-    else:
-        from ..containers.stockData import StockData
+from stockData import StockData
 
-from bs4 import BeautifulSoup
+from Config import *
+
 from urllib2 import urlopen
-
-BASE_URL = "https://finance.yahoo.com"
+from bs4 import BeautifulSoup
 
 def getDataBySymbol(symbol, verbose=False):
     symbolPart = "/q?s=%s" %symbol
@@ -43,7 +34,5 @@ def getDataBySymbol(symbol, verbose=False):
                     elementsDict.get("Ask"), elementsDict.get("EPS (ttm)"), elementsDict.get("Open"),
                     elementsDict.get("Market Cap"),elementsDict.get("Next Earnings Date"), elementsDict.get("Div & Yield"))
 
-data = getDataBySymbol("MSFT")
-
-# print data.getVolume()
-print data
+# data = getDataBySymbol("MSFT")
+# print data
