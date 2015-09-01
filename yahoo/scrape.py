@@ -2,7 +2,7 @@ __author__ = 'eugene.shragovich'
 
 from stockData import StockData
 
-from Config import *
+from config import *
 
 from urllib2 import urlopen
 from bs4 import BeautifulSoup
