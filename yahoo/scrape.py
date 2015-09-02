@@ -6,8 +6,22 @@ from config import *
 
 from urllib2 import urlopen
 from bs4 import BeautifulSoup
+import datetime
 
-def getDataBySymbol(symbol, verbose=False):
+def getDataBySymbol(symbol, verbose=False, useCache=False):
+    if useCache == True:
+        cacheFileH = open(cacheFilePath, "wb")
+        cacheFileH.write(str(datetime.datetime.now()))
+        cacheFileH.close()
+        fo = open(cacheFilePath, "r")
+        dataString = fo.read()
+        print(dataString)
+        now = datetime.datetime.now()
+        print now
+
+        #print dataString
+
+
     symbolPart = "/q?s=%s" %symbol
 
     actualURL = BASE_URL + symbolPart
